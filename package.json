@@ -4,7 +4,7 @@
   "description": "A theme for weibo.com focus on simplicity.",
   "main": "main.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp watch"
   },
   "repository": {
     "type": "git",

@@ -1,130 +1,173 @@
 @charset "UTF-8";
-#v6_pl_ad_bottomtip, #v6_pl_content_biztips, #v6_pl_content_publishertop, #v6_pl_rightmod_noticeboard, #v6_pl_rightmod_recominfo > :nth-child(n+3), #v6_pl_rightmod_updatev6, #v6_pl_rightmod_updatev6 + div[style] > :not(:first-child), #v6_trustPagelet_recom_member, .PCD_mplayer, .WB_main_r, .WB_tab_a, .icon_approve, .icon_approve_co, .icon_approve_dead, .icon_club, [id^=v6_pl_rightmod_ads], [node-type=feed_list_shieldKeyword], a[title="微博会员"], div[data-mark], div[node-type=feed_spread], .WB_ad_tm2015, .WB_ad_tm2015_v2 {
+#v6_pl_ad_bottomtip {
   display: none !important; }
 
-[node-type=feed_list_timeTip] {
-  background: 0 0;
-  box-shadow: none;
-  color: rgba(255, 255, 255, 0.8); }
+#v6_pl_content_biztips {
+  display: none !important; }
 
-.WB_feed .WB_cardwrap {
-  margin-bottom: 2px !important;
-  border-radius: 5px;
-  background-color: #F9F9F9; }
+#v6_pl_content_publishertop {
+  display: none !important; }
 
-#v6_pl_content_homefeed .WB_feed .WB_cardwrap:hover .WB_detail > .WB_expand_media_box > .WB_expand_media, .WB_feed .WB_cardwrap:hover {
-  background: #f5f8fa;
-  transition: .3s; }
+#v6_pl_rightmod_noticeboard {
+  display: none !important; }
 
-.WB_detail > .WB_expand_media_box > .WB_expand_media {
-  background-color: #F9F9F9; }
+#v6_pl_rightmod_recominfo > :nth-child(n+3) {
+  display: none !important; }
 
-div[node-type=feed_list_timeTip] {
-  color: #998e72; }
+#v6_pl_rightmod_updatev6 {
+  display: none !important; }
 
-.WB_feed .WB_cardwrap:hover > .WB_feed_handle > .WB_handle {
-  height: 38px;
-  transition: .1s; }
+#v6_pl_rightmod_updatev6 + div[style] > :not(:first-child) {
+  display: none !important; }
 
-.WB_feed {
-  padding-left: 2%; }
+#v6_trustPagelet_recom_member {
+  display: none !important; }
 
-.WB_main_c {
-  width: 98%; }
+.PCD_mplayer {
+  display: none !important; }
+
+.WB_main_r {
+  display: none !important; }
+
+.icon_approve {
+  display: none !important; }
+
+.icon_approve_co {
+  display: none !important; }
+
+.icon_approve_dead {
+  display: none !important; }
+
+.icon_club {
+  display: none !important; }
+
+[id^=v6_pl_rightmod_ads] {
+  display: none !important; }
+
+[node-type=feed_list_shieldKeyword] {
+  display: none !important; }
+
+a[title="微博会员"] {
+  display: none !important; }
+
+div[data-mark] {
+  display: none !important; }
+
+div[node-type=feed_spread] {
+  display: none !important; }
 
 body {
   font-family: Georgia,"Times New Roman","Microsoft YaHei","微软雅黑",STXihei,"华文细黑",serif;
   background-image: none;
   background-color: #eee; }
 
-.WB_frame {
-  background-color: transparent;
-  padding-top: 4px;
-  width: 768px; }
-
-.W_face_radius {
-  border-radius: 50px; }
-
-#home_new_feed_tip > a {
-  padding: 12px 0 !important;
-  font-size: 13px !important;
-  background: #fff8bf;
-  border-radius: 5px;
-  transition: .2s; }
-
-#home_new_feed_tip > a:hover {
-  padding: 12px 0 !important;
-  font-size: 13.5px !important;
-  background: #F7DD9B; }
-
-.WB_notes {
-  margin-top: 1px;
-  background: 0 0;
-  padding: 0 0 0 2%; }
-
-.S_page .WB_miniblog, .W_nologin {
+.W_nologin {
   background-image: none; }
 
 .WB_cardwrap {
   box-shadow: none; }
 
-div.WB_handle {
-  height: 0;
-  transition: .3s; }
-
 .WB_row_line .line span .icon_praised_b, .WB_row_line .line span .icon_praised_bc {
   position: relative; }
 
-a.S_txt2:hover {
-  background-color: #DDD;
-  font-size: 120%;
-  transition: .3s; }
-
-.WB_feed_together {
-  border-radius: 0 0 20px 20px; }
-
-.WB_feed_repeat {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px; }
-
+/* 时间分割线 */
 div[node-type=feed_list_timeTip] {
   visibility: hidden; }
 
 div[node-type=feed_list_timeText] {
   height: 8px !important; }
 
-.FRAME_main {
-  /* 清除页面背景图片 */ }
-  .FRAME_main .WB_miniblog {
-    background: 0 0;
-    padding-top: 57px; }
-    .FRAME_main .WB_miniblog .WB_global_nav .gn_header {
-      width: 730px;
-      /* header搜索框隐藏 */ }
-      .FRAME_main .WB_miniblog .WB_global_nav .gn_header .gn_logo {
-        margin-top: -10px !important; }
-      .FRAME_main .WB_miniblog .WB_global_nav .gn_header .gn_search_v2 {
+/* 清除页面背景图片 */
+.WB_miniblog {
+  background: 0 0;
+  background-image: none;
+  padding-top: 57px;
+  /* 主体 */ }
+  .WB_miniblog .WB_global_nav .gn_header {
+    width: 730px;
+    /* header搜索框隐藏 */ }
+    .WB_miniblog .WB_global_nav .gn_header .gn_logo {
+      margin-top: -10px !important; }
+    .WB_miniblog .WB_global_nav .gn_header .gn_search_v2 {
+      display: none !important; }
+    .WB_miniblog .WB_global_nav .gn_header .gn_position {
+      float: none !important; }
+      .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_nav {
         display: none !important; }
-      .FRAME_main .WB_miniblog .WB_global_nav .gn_header .gn_position {
-        float: none !important; }
-        .FRAME_main .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_nav {
-          display: none !important; }
-        .FRAME_main .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_set {
-          border-left-style: hidden !important;
-          float: none !important;
-          display: flex;
-          justify-content: space-around;
-          /* header菜单顺序 左:收件箱 中:发微博 右:设置*/ }
-          .FRAME_main .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_set .gn_set_list:nth-of-type(1), .FRAME_main .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_set .gn_set_list:nth-of-type(3) {
-            order: 1; }
-          .FRAME_main .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_set .gn_set_list:nth-of-type(2) {
-            order: 2; }
+      .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_set {
+        border-left-style: hidden !important;
+        float: none !important;
+        display: flex;
+        justify-content: space-around;
+        /* header菜单顺序 左:收件箱 中:发微博 右:设置*/ }
+        .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_set .gn_set_list:nth-of-type(1), .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_set .gn_set_list:nth-of-type(3) {
+          order: 1; }
+        .WB_miniblog .WB_global_nav .gn_header .gn_position .gn_set .gn_set_list:nth-of-type(2) {
+          order: 2; }
+  .WB_miniblog .WB_frame {
+    background-color: transparent;
+    padding-top: 4px;
+    width: 768px;
+    /* 隐藏私信 */ }
+    .WB_miniblog .WB_frame .WB_main_l {
+      display: none; }
+    .WB_miniblog .WB_frame #plc_main {
+      width: 100% !important; }
+      .WB_miniblog .WB_frame #plc_main .WB_main_c, .WB_miniblog .WB_frame #plc_main .WB_frame_c {
+        width: 100%;
+        margin-right: 0;
+        /* 微博分类 */
+        /* 微博搜索 */
+        /* 新微博提示 */ }
+        .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_tab_a, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_tab_a {
+          display: none; }
+        .WB_miniblog .WB_frame #plc_main .WB_main_c .feed_pop_search, .WB_miniblog .WB_frame #plc_main .WB_frame_c .feed_pop_search {
+          display: none; }
+        .WB_miniblog .WB_frame #plc_main .WB_main_c #home_new_feed_tip, .WB_miniblog .WB_frame #plc_main .WB_frame_c #home_new_feed_tip {
+          margin-top: 1px;
+          background: 0 0; }
+          .WB_miniblog .WB_frame #plc_main .WB_main_c #home_new_feed_tip a, .WB_miniblog .WB_frame #plc_main .WB_frame_c #home_new_feed_tip a {
+            padding: 12px 0 !important;
+            font-size: 13px !important;
+            background: #fff8bf;
+            border-radius: 5px;
+            transition: .2s; }
+            .WB_miniblog .WB_frame #plc_main .WB_main_c #home_new_feed_tip a:hover, .WB_miniblog .WB_frame #plc_main .WB_frame_c #home_new_feed_tip a:hover {
+              padding: 12px 0 !important;
+              font-size: 13.5px !important;
+              background: #F7DD9B; }
+        .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap {
+          margin-bottom: 2px !important;
+          border-radius: 5px;
+          background-color: #F9F9F9;
+          /* 鼠标在微博悬停时显示评论区域 */ }
+          .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap:hover, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap:hover {
+            background: #f5f8fa;
+            transition: .3s; }
+            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap:hover .WB_feed_handle > .WB_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap:hover .WB_feed_handle > .WB_handle {
+              height: 38px;
+              transition: .1s; }
+          .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle {
+            /* 收藏转发评论点赞菜单*/
+            /* 评论列表 */
+            /* 对原微博的转发 */ }
+            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle > .WB_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle > .WB_handle {
+              height: 0;
+              transition: .1s; }
+              .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle > .WB_handle ul li a:hover, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle > .WB_handle ul li a:hover {
+                background-color: #DDD;
+                font-size: 110%;
+                transition: .3s; }
+            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_repeat, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_repeat {
+              border-bottom-left-radius: 12px;
+              border-bottom-right-radius: 12px; }
+              .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_repeat .WB_face img, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_repeat .WB_face img {
+                border-radius: 50%; }
+            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_together, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_together {
+              display: none; }
 
-#plc_bot > div, .WB_frame #plc_main .WB_frame_b, .W_login_download, .W_nologin .leftbox, div.WB_main_l, div.W_fold, #WB_webim {
+#plc_bot > div, .WB_frame #plc_main .WB_frame_b, .W_login_download, .W_nologin .leftbox, div.W_fold, #WB_webim {
   display: none; }
-
-.WB_frame #plc_main, .WB_frame #plc_main .WB_frame_c, .WB_frame #plc_main .WB_frame_c .WB_outReset {
-  width: 100% !important; }
 
 /* 微博登录页面 */
 .W_nologin_logo {
@@ -141,6 +184,7 @@ div[node-type=feed_list_timeText] {
 div.pic_ad, .pt_li_3 {
   display: none; }
 
+/* 新版微博大图实在太丑 */
 .WB_media_wrap .media_box {
   float: none; }
 
@@ -216,4 +260,4 @@ div.multipic_preview .scroller .inner .info_box {
   margin-left: 0;
   right: 50%;
   left: inherit;
-  transform: translateX(410px) !important; }
+  transform: translateX(425px) !important; }
