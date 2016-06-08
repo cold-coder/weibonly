@@ -9,6 +9,7 @@
 					).pipe(
 						sass().on('error', sass.logError)
 					).pipe(
+						gulp.dest("./build")
 					);
 	})
 }())
