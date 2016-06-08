@@ -1,0 +1,27 @@
+{
+  "name": "weibonly",
+  "version": "1.0.0",
+  "description": "A theme for weibo.com focus on simplicity.",
+  "main": "main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cold-coder/weibonly.git"
+  },
+  "keywords": [
+    "weibo",
+    "style"
+  ],
+  "author": "Yao Cheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cold-coder/weibonly/issues"
+  },
+  "homepage": "https://github.com/cold-coder/weibonly#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1"
+  }
+}
