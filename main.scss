@@ -54,23 +54,24 @@ div[node-type=feed_list_timeText] {
     .WB_global_nav{
         .gn_header{
             width:730px;
-            .gn_logo{
-                margin-top:-10px!important;
-            }
             /* header搜索框隐藏 */
             .gn_search_v2{
                 display: none !important;
             }
             .gn_position{
                 float:none!important;
+                height: 100%;
                 .gn_nav{
                     display: none!important;
                 }
                 .gn_set{
+                    margin: 0;
+                    height: 100%;
                     border-left-style:hidden!important;
                     float:none!important;
                     display:flex;
                     justify-content:space-around;
+                    align-items: center;
                     /* header菜单顺序 左:收件箱 中:发微博 右:设置*/
                     .gn_set_list:nth-of-type(1),.gn_set_list:nth-of-type(3){
                         order: 1;
@@ -91,8 +92,19 @@ div[node-type=feed_list_timeText] {
         .WB_main_l {
             display: none;
         }
+
+        .WB_frame_a {
+            width: 100% !important;
+            /* 隐藏Profile Cover右上角的更改主题 */
+            .pf_use_num {
+                display: none !important;
+            }
+            .pf_copy_icon {
+                display: none !important;
+            }
+        }
         #plc_main {
-            width:100%!important;
+            width:100% !important;
             .WB_main_c,.WB_frame_c {
                 width: 100%;
                 margin-right: 0;
