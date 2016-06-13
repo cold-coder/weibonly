@@ -133,7 +133,8 @@ div[node-type=feed_list_timeText] {
         .WB_miniblog .WB_frame #plc_main .WB_main_c .feed_pop_search, .WB_miniblog .WB_frame #plc_main .WB_frame_c .feed_pop_search {
           display: none; }
         .WB_miniblog .WB_frame #plc_main .WB_main_c #home_new_feed_tip, .WB_miniblog .WB_frame #plc_main .WB_frame_c #home_new_feed_tip {
-          margin-top: 1px;
+          margin-top: 0;
+          padding-top: 0;
           background: 0 0; }
           .WB_miniblog .WB_frame #plc_main .WB_main_c #home_new_feed_tip a, .WB_miniblog .WB_frame #plc_main .WB_frame_c #home_new_feed_tip a {
             padding: 12px 0 !important;

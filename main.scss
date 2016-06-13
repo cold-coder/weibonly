@@ -118,7 +118,8 @@ div[node-type=feed_list_timeText] {
                 }
                 /* 新微博提示 */
                 #home_new_feed_tip{
-                    margin-top: 1px;
+                    margin-top: 0;
+                    padding-top: 0;
                     background: 0 0;
                     a {
                         padding: 12px 0 !important;
