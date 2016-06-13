@@ -13,15 +13,15 @@
 .icon_approve_dead{ display: none !important; }
 .icon_club{ display: none !important; }
 [id^=v6_pl_rightmod_ads]{ display: none !important; }
-[node-type=feed_list_shieldKeyword]{ display: none !important; }
 a[title="微博会员"]{ display: none !important; }
 div[data-mark]{ display: none !important; }
 div[node-type=feed_spread]{ display: none !important; }
 
+
 body {
   font-family: Georgia,"Times New Roman","Microsoft YaHei","微软雅黑",STXihei,"华文细黑",serif;
-  background-image: none;
-  background-color: #eee; 
+  background-image: none !important;
+  background-color: #eee !important; 
 }
 
 
@@ -38,18 +38,25 @@ body {
 .WB_row_line .line span .icon_praised_b, .WB_row_line .line span .icon_praised_bc {
   position: relative; }
 
+/* 正在加载 */
+div[requesttype="newFeed"] {
+    margin: 0 0 10px 0;
+    padding: 0 !important;
+}
 
 /* 时间分割线 */
 div[node-type=feed_list_timeTip] {
-  visibility: hidden; }
-div[node-type=feed_list_timeText] {
-  height: 8px !important; }
+    visibility: hidden; 
+    margin: 0 !important;
+    height: 10px;
+}
+
 
 
 /* 清除页面背景图片 */
 .WB_miniblog {
     background: 0 0;
-    background-image: none;
+    background-image: none !important;
     padding-top: 57px;
     .WB_global_nav{
         .gn_header{
@@ -95,6 +102,7 @@ div[node-type=feed_list_timeText] {
 
         .WB_frame_a {
             width: 100% !important;
+            margin: 0 !important;
             /* 隐藏Profile Cover右上角的更改主题 */
             .pf_use_num {
                 display: none !important;
@@ -136,7 +144,7 @@ div[node-type=feed_list_timeText] {
                 }
                 .WB_feed {
                     // padding-left: 2%;
-                    .WB_cardwrap {
+                    .WB_cardwrap.WB_feed_type {
                         margin-bottom: 2px !important;
                         border-radius: 5px;
                         background-color: #F9F9F9; 
@@ -181,6 +189,9 @@ div[node-type=feed_list_timeText] {
                                 // }
                             }
                         }
+                    }
+                    [node-type=feed_list_shieldKeyword] {
+                        display: none;
                     }
                 }
             }
@@ -256,10 +267,6 @@ div[node-type=feed_list_forwardContent]:hover>.WB_feed_expand>.WB_expand{
 .W_skin_banner{
 	display:none;
 }
-/* 隐藏footer */
-.WB_footer {
-    display: none;
-}
 /*  隐藏未登录时顶部的类别*/
 div#pl_common_unlogininvitereg {
     display: none;
@@ -282,6 +289,10 @@ div.multipic_preview .scroller .inner .info_box {
     display: none !important;
 }
 
+/* 隐藏footer */
+#pl_common_footer > .WB_footer {
+    display: none;
+}
 /* 返回顶部按钮吸附于微博列表侧边 */
 .W_gotop{
     margin-left:0;
@@ -290,3 +301,35 @@ div.multipic_preview .scroller .inner .info_box {
     transform: translateX(425px) !important;
 }
 
+/* 隐藏带定位的微博的地区信息 */
+div.WB_feed_spec{
+    display: none !important;
+}
+
+/* 个人主页 */
+
+.PCD_header .pf_wrap{
+    /*
+     * http://lea.verou.me/css3patterns/#wave
+     */
+    .cover_wrap {
+        background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,  radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,  radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
+        background-size:110px 200px;
+        background-repeat:repeat-x;
+    }
+    /* 隐藏个人主页的切换主题 */
+    .upcover .icon_setskin {
+        display: none !important;
+    } 
+}
+
+/* Article Page*/
+
+.B_artical {
+    .WB_frame {
+        width: 100%;
+        .WB_artical {
+            margin: auto;
+        }
+    }
+}

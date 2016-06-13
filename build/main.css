@@ -44,9 +44,6 @@
 [id^=v6_pl_rightmod_ads] {
   display: none !important; }
 
-[node-type=feed_list_shieldKeyword] {
-  display: none !important; }
-
 a[title="微博会员"] {
   display: none !important; }
 
@@ -58,8 +55,8 @@ div[node-type=feed_spread] {
 
 body {
   font-family: Georgia,"Times New Roman","Microsoft YaHei","微软雅黑",STXihei,"华文细黑",serif;
-  background-image: none;
-  background-color: #eee; }
+  background-image: none !important;
+  background-color: #eee !important; }
 
 .W_nologin {
   background-image: none; }
@@ -70,17 +67,21 @@ body {
 .WB_row_line .line span .icon_praised_b, .WB_row_line .line span .icon_praised_bc {
   position: relative; }
 
+/* 正在加载 */
+div[requesttype="newFeed"] {
+  margin: 0 0 10px 0;
+  padding: 0 !important; }
+
 /* 时间分割线 */
 div[node-type=feed_list_timeTip] {
-  visibility: hidden; }
-
-div[node-type=feed_list_timeText] {
-  height: 8px !important; }
+  visibility: hidden;
+  margin: 0 !important;
+  height: 10px; }
 
 /* 清除页面背景图片 */
 .WB_miniblog {
   background: 0 0;
-  background-image: none;
+  background-image: none !important;
   padding-top: 57px;
   /* 主体 */ }
   .WB_miniblog .WB_global_nav .gn_header {
@@ -115,6 +116,7 @@ div[node-type=feed_list_timeText] {
       display: none; }
     .WB_miniblog .WB_frame .WB_frame_a {
       width: 100% !important;
+      margin: 0 !important;
       /* 隐藏Profile Cover右上角的更改主题 */ }
       .WB_miniblog .WB_frame .WB_frame_a .pf_use_num {
         display: none !important; }
@@ -146,35 +148,37 @@ div[node-type=feed_list_timeText] {
               padding: 12px 0 !important;
               font-size: 13.5px !important;
               background: #F7DD9B; }
-        .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap {
+        .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type {
           margin-bottom: 2px !important;
           border-radius: 5px;
           background-color: #F9F9F9;
           /* 鼠标在微博悬停时显示评论区域 */ }
-          .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap:hover, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap:hover {
+          .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type:hover, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type:hover {
             background: #f5f8fa;
             transition: .3s; }
-            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap:hover .WB_feed_handle > .WB_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap:hover .WB_feed_handle > .WB_handle {
+            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type:hover .WB_feed_handle > .WB_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type:hover .WB_feed_handle > .WB_handle {
               height: 38px;
               transition: .1s; }
-          .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle {
+          .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle {
             /* 收藏转发评论点赞菜单*/
             /* 评论列表 */
             /* 对原微博的转发 */ }
-            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle > .WB_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle > .WB_handle {
+            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle > .WB_handle, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle > .WB_handle {
               height: 0;
               transition: .1s; }
-              .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle > .WB_handle ul li a:hover, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle > .WB_handle ul li a:hover {
+              .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle > .WB_handle ul li a:hover, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle > .WB_handle ul li a:hover {
                 background-color: #DDD;
                 font-size: 110%;
                 transition: .3s; }
-            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_repeat, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_repeat {
+            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle .WB_feed_repeat, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle .WB_feed_repeat {
               border-bottom-left-radius: 12px;
               border-bottom-right-radius: 12px; }
-              .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_repeat .WB_face img, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_repeat .WB_face img {
+              .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle .WB_feed_repeat .WB_face img, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle .WB_feed_repeat .WB_face img {
                 border-radius: 50%; }
-            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_together, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap .WB_feed_handle .WB_feed_together {
+            .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle .WB_feed_together, .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed .WB_cardwrap.WB_feed_type .WB_feed_handle .WB_feed_together {
               display: none; }
+        .WB_miniblog .WB_frame #plc_main .WB_main_c .WB_feed [node-type=feed_list_shieldKeyword], .WB_miniblog .WB_frame #plc_main .WB_frame_c .WB_feed [node-type=feed_list_shieldKeyword] {
+          display: none; }
 
 #plc_bot > div, .WB_frame #plc_main .WB_frame_b, .W_login_download, .W_nologin .leftbox, div.W_fold, #WB_webim {
   display: none; }
@@ -241,10 +245,6 @@ div[node-type=feed_list_forwardContent]:hover > .WB_feed_expand > .WB_expand {
 .W_skin_banner {
   display: none; }
 
-/* 隐藏footer */
-.WB_footer {
-  display: none; }
-
 /*  隐藏未登录时顶部的类别*/
 div#pl_common_unlogininvitereg {
   display: none; }
@@ -265,9 +265,36 @@ div.multipic_preview .scroller .inner .info_box {
 .pos_icon .pos_margin {
   display: none !important; }
 
+/* 隐藏footer */
+#pl_common_footer > .WB_footer {
+  display: none; }
+
 /* 返回顶部按钮吸附于微博列表侧边 */
 .W_gotop {
   margin-left: 0;
   right: 50%;
   left: inherit;
   transform: translateX(425px) !important; }
+
+/* 隐藏带定位的微博的地区信息 */
+div.WB_feed_spec {
+  display: none !important; }
+
+/* 个人主页 */
+.PCD_header .pf_wrap {
+  /*
+     * http://lea.verou.me/css3patterns/#wave
+     */
+  /* 隐藏个人主页的切换主题 */ }
+  .PCD_header .pf_wrap .cover_wrap {
+    background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #48B;
+    background-size: 110px 200px;
+    background-repeat: repeat-x; }
+  .PCD_header .pf_wrap .upcover .icon_setskin {
+    display: none !important; }
+
+/* Article Page*/
+.B_artical .WB_frame {
+  width: 100%; }
+  .B_artical .WB_frame .WB_artical {
+    margin: auto; }
