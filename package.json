@@ -4,7 +4,8 @@
   "description": "A theme for weibo.com focus on simplicity.",
   "main": "main.scss",
   "scripts": {
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1"
   }
 }
