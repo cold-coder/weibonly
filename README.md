@@ -4,14 +4,14 @@
 ## Develop Step
 
 1. clone repo
-``` bash
-$ git clone https://github.com/cold-coder/weibonly.git
-```
+   ``` bash
+   $ git clone https://github.com/cold-coder/weibonly.git
+   ```
 
 2. `cd weibonly` and install node modules
-``` bash
-$ npm install
-```
+   ``` bash
+   $ npm install
+   ```
 
 3. run `npm run dev` for development, will generate `main.css` in current folder
 
