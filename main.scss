@@ -54,6 +54,51 @@ div[node-type=feed_list_timeTip] {
     height: 10px;
 }
 
+/* 默认隐藏评论栏，当鼠标hover于当前feed时展开 */
+@mixin hoverable-comment-bar() {
+    .WB_cardwrap.WB_feed_type {
+        margin-bottom: 2px !important;
+        border-radius: 5px;
+        background-color: #F9F9F9; 
+        /* 鼠标在微博悬停时显示评论区域 */
+        &:hover {
+            background: #f5f8fa;
+            transition: .3s;
+            .WB_feed_handle {
+                >.WB_handle {
+                    height: 38px;
+                    transition: .1s;
+                }
+            }
+        }
+        /* 收藏转发评论点赞菜单*/
+        .WB_feed_handle {
+            >.WB_handle {
+                height: 0;
+                transition: .1s;
+                ul li a:hover {
+                    background-color: #DDD;
+                    font-size: 110%;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}
+
+/* 当鼠标hover于当前quote时加橙色边框 */
+@mixin highlight-block() {
+    .WB_expand{
+        margin:0 0 5px 0;
+        padding: 10px 16px;
+        border: solid 1px #e1e8ed;
+        &:hover {
+            border: solid 1px rgba(247, 103, 29, 0.35);
+            transition: .3s;
+        }
+    }
+}
+
 
 
 /* 清除页面背景图片 */
@@ -145,36 +190,29 @@ div[node-type=feed_list_timeTip] {
                         }
                     }
                 }
-                .WB_feed {
-                    // padding-left: 2%;
-                    .WB_cardwrap.WB_feed_type {
-                        margin-bottom: 2px !important;
-                        border-radius: 5px;
-                        background-color: #F9F9F9; 
-                        /* 鼠标在微博悬停时显示评论区域 */
-                        &:hover {
-                            background: #f5f8fa;
-                            transition: .3s;
-                            .WB_feed_handle {
-                                >.WB_handle {
-                                    height: 38px;
-                                    transition: .1s;
-                                }
-                            }
-                        }
+                /* 微博列表页面 */
+                .WB_feed.WB_feed_v3 {
+
+                        @include hoverable-comment-bar();
+
+                        /* 微博内容 */
                         .WB_feed_detail {
-                        }
-                        .WB_feed_handle {
-                            /* 收藏转发评论点赞菜单*/
-                            >.WB_handle {
-                                height: 0;
-                                transition: .1s;
-                                ul li a:hover {
-                                    background-color: #DDD;
-                                    font-size: 110%;
-                                    transition: .3s;
+                            .WB_detail{
+
+                                /* 转发微博为 WB_feed_expand */
+                                .WB_feed_expand{
+                                    @include highlight-block();
+                                }
+                                /* 原创微博为 WB_media_wrap */
+                                .WB_media_wrap {
+                                }
+                                .WB_expand_media_box {
+                                    margin: 0 !important;
                                 }
                             }
+                        }
+                        /* 收藏转发评论点赞菜单*/
+                        .WB_feed_handle {
                             /* 评论列表 */
                             .WB_feed_repeat {
                                 border-bottom-left-radius: 12px;
@@ -186,16 +224,17 @@ div[node-type=feed_list_timeTip] {
                             /* 对原微博的转发 */
                             .WB_feed_together {
                                 display: none;
-                                // border-radius: 0 0 20px 20px;
-                                // .wft_hd {
-                                //     display: none;
-                                // }
                             }
                         }
-                    }
+                    // }
                     [node-type=feed_list_shieldKeyword] {
                         display: none;
                     }
+                }
+                /* 点评点赞列表页面 */
+                .WB_feed.WB_feed_comment {
+                    @include hoverable-comment-bar();
+                    @include highlight-block();
                 }
             }
         }
@@ -240,24 +279,7 @@ ul.WB_media_a>li{
     margin:0 auto!important;
 }
 
-/* 转发微博hover样式 */
-.WB_feed_expand{
-    border: solid 1px #e1e8ed;
-}
-div[node-type=feed_list_forwardContent]:hover>.WB_feed_expand>.WB_expand{
-	border: solid 1px #F7671D;
-}
-.WB_feed_v3 .WB_expand{
-    margin:0;
-    padding: 10px 16px 13px;
-}
-.WB_feed_expand:hover{
-    border: solid 1px rgba(247, 103, 29, 0.35);
-    transition: .3s;
-}
-.WB_feed_v3 .WB_expand_media_box{
-	margin: 0;
-}
+
 /* 隐藏好友赞过的微博 */
 .WB_cardtitle_b,.WB_cardtitle_b ~ div{
     display:none;
