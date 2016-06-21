@@ -158,6 +158,9 @@ div[node-type=feed_list_timeTip] {
             .pf_copy_icon {
                 display: none !important;
             }
+            #Pl_Card_HeaderMainv6__1 {
+                display: none !important;   
+            }
         }
         #plc_main {
             width:100% !important;
@@ -235,6 +238,17 @@ div[node-type=feed_list_timeTip] {
                 .WB_feed.WB_feed_comment {
                     @include hoverable-comment-bar();
                     @include highlight-block();
+                }
+                /* 文章页面 */
+                /* 打赏 */
+                #Pl_Third_Inline__3{
+
+                }
+                /* 分享,转发 */
+                #Pl_Official_CardMixFeedv6__4{
+                    .inputfunc_simple_wrap {
+                        width: 672px;
+                    }
                 }
             }
         }
