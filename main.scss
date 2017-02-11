@@ -8,9 +8,10 @@
 #v6_trustPagelet_recom_member{ display: none !important; }
 .PCD_mplayer{ display: none !important; }
 .WB_main_r{ display: none !important; }
-.icon_approve{ display: none !important; }
-.icon_approve_co{ display: none !important; }
-.icon_approve_dead{ display: none !important; }
+.icon_approve, .icon_approve_co, .icon_approve_dead, .icon_approve_gold, .icon_redpack{
+  display: none !important;
+}
+
 .icon_club{ display: none !important; }
 [id^=v6_pl_rightmod_ads]{ display: none !important; }
 a[title="微博会员"]{ display: none !important; }
@@ -24,17 +25,17 @@ div[node-type=feed_spread]{ display: none !important; }
 body {
   font-family: Georgia,"Times New Roman","Microsoft YaHei","微软雅黑",STXihei,"华文细黑",serif;
   background-image: none !important;
-  background-color: #eee !important; 
+  background-color: #eee !important;
 }
 
 
 .W_nologin {
-  background-image: none; 
+  background-image: none;
 }
 
 
 .WB_cardwrap {
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 
@@ -49,7 +50,7 @@ div[requesttype="newFeed"] {
 
 /* 时间分割线 */
 div[node-type=feed_list_timeTip] {
-    visibility: hidden; 
+    visibility: hidden;
     margin: 0 !important;
     height: 10px;
 }
@@ -59,7 +60,7 @@ div[node-type=feed_list_timeTip] {
     .WB_cardwrap.WB_feed_type {
         margin-bottom: 2px !important;
         border-radius: 5px;
-        background-color: #F9F9F9; 
+        background-color: #F9F9F9;
         /* 鼠标在微博悬停时显示评论区域 */
         &:hover {
             background: #f5f8fa;
@@ -136,7 +137,7 @@ div[node-type=feed_list_timeTip] {
                     }
                 }
             }
-        }   
+        }
     }
     /* 主体 */
     .WB_frame{
@@ -159,7 +160,7 @@ div[node-type=feed_list_timeTip] {
                 display: none !important;
             }
             #Pl_Card_HeaderMainv6__1 {
-                display: none !important;   
+                display: none !important;
             }
         }
         #plc_main {
@@ -276,27 +277,27 @@ div.pic_ad,.pt_li_3 {
 }
 
 /* 新版微博大图实在太丑 */
-.WB_media_wrap .media_box{
-    float:none
-}
-ul.WB_media_a{
-    width:100%!important;
-}
-ul.WB_media_a>li{
-    width:100px!important;
-    height:100px!important;
-}
-.WB_feed_v3 .WB_media_a_m7 .li_4{
-    clear:none;
-}
-.WB_media_view{
-    margin:0 auto!important;
-}
+//.WB_media_wrap .media_box{
+//    float:none
+//}
+//ul.WB_media_a{
+//    width:100%!important;
+//}
+//ul.WB_media_a>li{
+//    width:100px!important;
+//    height:100px!important;
+//}
+//.WB_feed_v3 .WB_media_a_m7 .li_4{
+//    clear:none;
+//}
+//.WB_media_view{
+//    margin:0 auto!important;
+//}
 
 
 /* 隐藏好友赞过的微博 */
 .WB_cardtitle_b,.WB_cardtitle_b ~ div{
-    display:none;
+    //display:none;
 }
 /* 隐藏VIP会员发出微博的角标背景 */
 .WB_feed_vipcover > .WB_feed_detail {
@@ -359,7 +360,7 @@ div.WB_feed_spec{
     /* 隐藏个人主页的切换主题 */
     .upcover .icon_setskin {
         display: none !important;
-    } 
+    }
 }
 
 /* Article Page*/
